@@ -1,0 +1,181 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+}
+
+/* NAVBAR LINK */
+.nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: black;
+  border-radius: 999px;
+  transition: 0.35s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #555;
+}
+
+/* ================= TOUR CARD ================= */
+
+.tour-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  height: 460px;
+
+  cursor: pointer;
+}
+
+.tour-image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.8s ease;
+}
+
+.tour-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.12));
+}
+
+.tour-content {
+  position: absolute;
+
+  bottom: 0;
+
+  padding: 35px;
+
+  color: white;
+}
+
+.tour-content span {
+  color: #22d3ee;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.tour-content h3 {
+  font-size: 34px;
+
+  font-weight: 700;
+
+  margin: 14px 0;
+}
+
+.tour-content p {
+  color: rgba(255, 255, 255, 0.72);
+
+  line-height: 1.8;
+}
+
+.tour-card:hover .tour-image {
+  transform: scale(1.08);
+}
+
+/* ================= PARALLAX ================= */
+
+.parallax-image {
+  transform: scale(1.1);
+
+  animation: slowZoom 14s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1.1) translateY(0px);
+  }
+
+  to {
+    transform: scale(1.2) translateY(-20px);
+  }
+}
+
+/* ================= CATEGORY ================= */
+
+.category-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 30px;
+
+  padding: 45px 35px;
+
+  transition: 0.4s ease;
+
+  text-align: center;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.category-card i {
+  font-size: 52px;
+
+  color: orange;
+
+  margin-bottom: 24px;
+}
+
+.category-card h3 {
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.category-card p {
+  color: rgba(255, 255, 255, 0.72);
+
+  line-height: 1.8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .tour-card {
+    height: 380px;
+  }
+}

@@ -1,0 +1,280 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+}
+
+/* NAVBAR LINK */
+.nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: black;
+  border-radius: 999px;
+  transition: 0.35s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #555;
+}
+
+/* ================= HERO STATS ================= */
+
+.hero-stat {
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 24px;
+
+  padding: 28px 20px;
+}
+
+.hero-stat h3 {
+  font-size: 32px;
+
+  font-weight: 700;
+
+  color: #facc15;
+
+  margin-bottom: 8px;
+}
+
+.hero-stat p {
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 14px;
+}
+
+/* ================= FILTER ================= */
+
+.map-filter-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 30px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+/* SEARCH */
+
+.search-box {
+  flex: 1;
+
+  min-width: 250px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  padding: 16px 20px;
+
+  border-radius: 18px;
+}
+
+.search-box i {
+  color: #facc15;
+
+  font-size: 22px;
+}
+
+.search-box input {
+  background: transparent;
+
+  outline: none;
+
+  width: 100%;
+
+  color: white;
+}
+
+/* FILTER */
+
+.filter-group {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+.filter-btn {
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover,
+.active-filter {
+  background: #facc15;
+
+  color: black;
+}
+
+/* ================= LOCATION CARD ================= */
+
+.location-card {
+  position: relative;
+
+  height: 420px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+.location-image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.7s ease;
+}
+
+.location-card:hover .location-image {
+  transform: scale(1.08);
+}
+
+.location-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.location-content {
+  position: absolute;
+
+  left: 30px;
+
+  bottom: 30px;
+
+  color: white;
+}
+
+.location-content h3 {
+  font-size: 28px;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.location-content p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ================= ROUTE CARD ================= */
+
+.route-card {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 30px;
+
+  padding: 45px 35px;
+
+  transition: 0.4s ease;
+}
+
+.route-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+.route-card i {
+  font-size: 44px;
+
+  color: #facc15;
+
+  margin-bottom: 28px;
+}
+
+.route-card h3 {
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  margin-bottom: 24px;
+}
+
+.route-card ul {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.route-card li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ================= MAP ================= */
+
+#map {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  #map {
+    height: 500px;
+  }
+
+  .location-card {
+    height: 340px;
+  }
+}
