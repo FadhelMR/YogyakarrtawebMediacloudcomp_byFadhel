@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Budaya Yogyakarta | Mediacloud competition made by Fadhel</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo -->
+    <link rel="icon" type="image/png" href="/assets/img/logo.png" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/budaya.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[9999]"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between"
+      >
+        <!-- LOGO -->
+        <div class="flex items-center gap-3">
+          <img
+            src="/assets/img/logo.png"
+            alt="Logo"
+            class="w-10 h-10 object-contain"
+          />
+
+          <!-- <h1 class="font-semibold text-lg hidden sm:block">
+            Explore Yogyakarta
+          </h1> -->
+        </div>
+
+        <!-- DESKTOP MENU -->
+        <ul
+          class="hidden lg:flex items-center gap-8 text-sm font-medium text-black"
+        >
+          <li><a href="/beranda.html" class="nav-link">Beranda</a></li>
+
+          <li><a href="/jelajahi.html" class="nav-link">Jelajahi</a></li>
+
+          <li><a href="/budaya.html" class="nav-link active">Budaya</a></li>
+
+          <li><a href="/kuliner.html" class="nav-link">Kuliner</a></li>
+
+          <li><a href="/wisata.html" class="nav-link">Wisata</a></li>
+
+          <li><a href="/smart-city.html" class="nav-link">Smart City</a></li>
+
+          <li><a href="/peta.html" class="nav-link">Peta</a></li>
+
+          <li><a href="/tentang.html" class="nav-link">Tentang</a></li>
+        </ul>
+
+        <!-- HAMBURGER -->
+        <button id="menu-btn" class="lg:hidden text-4xl text-black">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-white border-t border-black/10"
+      >
+        <ul class="flex flex-col p-6 gap-5 text-sm font-medium text-black">
+          <li><a href="/beranda.html">Beranda</a></li>
+
+          <li><a href="/jelajahi.html">Jelajahi</a></li>
+
+          <li><a href="/budaya.html">Budaya</a></li>
+
+          <li><a href="/kuliner.html">Kuliner</a></li>
+
+          <li><a href="/wisata.html">Wisata</a></li>
+
+          <li><a href="/smart-city.html">Smart City</a></li>
+
+          <li><a href="/peta.html">Peta</a></li>
+
+          <li><a href="/tentang.html">Tentang</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ================= HERO BUDAYA ================= -->
+    <section
+      class="relative min-h-screen overflow-hidden flex items-center justify-center"
+    >
+      <!-- VIDEO -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source
+          src="/assets/img/Discover Indonesia_ Yogyakarta in Cinematic 4K _ Culture, Temples & Nature.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-black/70"></div>
+
+      <!-- BATIK -->
+      <div
+        class="absolute inset-0 opacity-[0.08] bg-cover bg-center"
+        style="
+          background-image: url(&quot;/assets/img/batikbackground.png&quot;);
+        "
+      ></div>
+
+      <!-- WAYANG -->
+      <img
+        src="/assets/img/wayangkiri.png"
+        class="wayang-left absolute left-0 bottom-0 w-32 md:w-52 z-20 opacity-90"
+      />
+
+      <img
+        src="/assets/img/wayangkanan.png"
+        class="wayang-right absolute right-0 bottom-0 w-32 md:w-52 z-20 opacity-90"
+      />
+
+      <!-- CONTENT -->
+      <div class="relative z-30 text-center text-white px-6 max-w-5xl pt-32">
+        <p
+          class="uppercase tracking-[5px] text-yellow-400 text-sm mb-5 fade-up"
+        >
+          Culture Of Yogyakarta
+        </p>
+
+        <h1
+          class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-8 fade-up"
+        >
+          The Soul Of <br />
+          Yogyakarta Culture
+        </h1>
+
+        <p
+          class="text-gray-300 max-w-3xl mx-auto leading-relaxed text-sm md:text-lg fade-up"
+        >
+          Warisan budaya Yogyakarta yang terus hidup di tengah perkembangan
+          modernisasi kota digital.
+        </p>
+
+        <div class="mt-10 fade-up">
+          <a
+            href="#culture"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-medium hover:scale-105 transition"
+          >
+            Explore Culture
+            <i class="bx bx-right-arrow-alt text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTRO CULTURE ================= -->
+    <section id="culture" class="bg-[#0b0b0b] py-28 relative overflow-hidden">
+      <!-- BATIK -->
+      <div
+        class="absolute inset-0 opacity-[0.04] bg-cover bg-center"
+        style="
+          background-image: url(&quot;/assets/img/batikbackground.png&quot;);
+        "
+      ></div>
+
+      <div class="relative z-20 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- IMAGE -->
+          <div class="fade-up">
+            <div class="culture-image-wrapper">
+              <img src="/assets/img/Yogyakarta.jpg" class="culture-image" />
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="fade-up">
+            <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+              Cultural Heritage
+            </p>
+
+            <h2
+              class="text-4xl md:text-5xl font-bold text-white leading-tight mb-8"
+            >
+              Rich Culture And <br />
+              Timeless Tradition
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed mb-10">
+              Yogyakarta dikenal sebagai pusat budaya Jawa yang mempertahankan
+              tradisi, seni, dan adat istiadat hingga saat ini.
+            </p>
+
+            <!-- STATS -->
+            <div class="grid grid-cols-2 gap-6">
+              <div class="culture-stat">
+                <h3>1755</h3>
+
+                <p>Keraton Established</p>
+              </div>
+
+              <div class="culture-stat">
+                <h3>50+</h3>
+
+                <p>Cultural Festivals</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CULTURE SHOWCASE ================= -->
+    <section class="bg-black py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADING -->
+        <div class="text-center mb-20 fade-up">
+          <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+            Traditional Arts
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">
+            Cultural Showcase
+          </h2>
+
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Berbagai seni dan budaya tradisional khas Yogyakarta yang tetap
+            lestari hingga sekarang.
+          </p>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CARD -->
+          <div class="culture-card-modern fade-up">
+            <img src="/assets/img/tarijogja.JPG" class="culture-card-image" />
+
+            <div class="culture-overlay"></div>
+
+            <div class="culture-card-content">
+              <i class="bx bx-mask"></i>
+
+              <h3>Tari Tradisional</h3>
+
+              <p>
+                Kesenian tari khas Yogyakarta dengan gerakan penuh filosofi.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="culture-card-modern fade-up">
+            <img src="/assets/img/gamelan.jpg" class="culture-card-image" />
+
+            <div class="culture-overlay"></div>
+
+            <div class="culture-card-content">
+              <i class="bx bx-music"></i>
+
+              <h3>Gamelan Jawa</h3>
+
+              <p>Musik tradisional yang menjadi identitas budaya Jawa.</p>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="culture-card-modern fade-up">
+            <img
+              src="/assets/img/keratonjogja.jpg"
+              class="culture-card-image"
+            />
+
+            <div class="culture-overlay"></div>
+
+            <div class="culture-card-content">
+              <i class="bx bx-building-house"></i>
+
+              <h3>Keraton Jogja</h3>
+
+              <p>Simbol budaya dan sejarah Kesultanan Yogyakarta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TIMELINE ================= -->
+    <section class="bg-[#0b0b0b] py-28">
+      <div class="max-w-5xl mx-auto px-6">
+        <!-- HEADING -->
+        <div class="text-center mb-20 fade-up">
+          <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+            History Timeline
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-bold text-white">
+            Journey Of Culture
+          </h2>
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="timeline">
+          <!-- ITEM -->
+          <div class="timeline-item fade-up">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+              <span>1755</span>
+
+              <h3>Keraton Yogyakarta</h3>
+
+              <p>Berdirinya Keraton sebagai pusat budaya dan pemerintahan.</p>
+            </div>
+          </div>
+
+          <!-- ITEM -->
+          <div class="timeline-item fade-up">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+              <span>1800</span>
+
+              <h3>Perkembangan Batik</h3>
+
+              <p>Batik berkembang menjadi identitas budaya Yogyakarta.</p>
+            </div>
+          </div>
+
+          <!-- ITEM -->
+          <div class="timeline-item fade-up">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+              <span>2026</span>
+
+              <h3>Digital Cultural City</h3>
+
+              <p>
+                Budaya tradisional dipadukan dengan perkembangan teknologi
+                modern.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black text-white">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <!-- LEFT -->
+          <div class="md:col-span-5">
+            <img src="/assets/img/logo.png" class="w-16 mb-5" />
+
+            <h2 class="text-2xl font-semibold mb-4">Explore Yogyakarta</h2>
+
+            <p class="text-gray-400 leading-relaxed max-w-md">
+              Portal digital wisata dan budaya Yogyakarta untuk turis lokal
+              maupun mancanegara.
+            </p>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="md:col-span-7">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+              <!-- MENU -->
+              <div>
+                <h3 class="font-semibold mb-5">Explore</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a href="/beranda.html" class="hover:text-white transition">
+                      Beranda
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/wisata.html" class="hover:text-white transition">
+                      Wisata
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/budaya.html" class="hover:text-white transition">
+                      Budaya
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- INFO -->
+              <div>
+                <h3 class="font-semibold mb-5">Information</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a
+                      href="/smart-city.html"
+                      class="hover:text-white transition"
+                    >
+                      Smart City
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/peta.html" class="hover:text-white transition">
+                      Peta
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="hover:text-white transition">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- SOCIAL -->
+              <div>
+                <h3 class="font-semibold mb-5">Social</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a
+                      href="www.instagram.com/@fadhelmr123"
+                      class="hover:text-white transition"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="facebook.com" class="hover:text-white transition">
+                      Facebook
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/fadhel-muhammad-ramadhan-568418376/"
+                      class="hover:text-white transition"
+                    >
+                      Linkedin
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-white/10 mt-14 pt-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-3"
+          >
+            <p class="text-sm text-gray-500">© 2026 Explore Yogyakarta</p>
+
+            <p class="text-sm text-gray-500">Designed by Fadhel</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/budaya.js"></script>
+  </body>
+</html>

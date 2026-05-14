@@ -1,0 +1,323 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar Animation */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: black;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after,
+.active::after {
+  width: 100%;
+}
+
+/* HOVER TEXT */
+.nav-link:hover {
+  transform: translateY(-3px);
+
+  color: #444;
+}
+
+/* UNDERLINE */
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+
+  background: black;
+
+  border-radius: 999px;
+
+  transition: width 0.35s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* NAVBAR LOAD */
+@keyframes navbarReveal {
+  from {
+    opacity: 0;
+
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0px);
+  }
+}
+
+/* Hero Overlay */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Card Hover */
+.explore-card {
+  transition: 0.35s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.08);
+}
+
+/* Fade Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Wayang Animation */
+.wayang-left {
+  animation: floatLeft 4s ease-in-out infinite;
+}
+
+.wayang-right {
+  animation: floatRight 4s ease-in-out infinite;
+}
+
+@keyframes floatLeft {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes floatRight {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.backgroundbudaya {
+  background-image: url(/assets/img/batikbackground.png);
+}
+
+/* Card Hover */
+.culture-card,
+.explore-card {
+  transition: all 0.4s ease;
+}
+
+.culture-card:hover,
+.explore-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* FEATURE CARD */
+.feature-card {
+  background: white;
+
+  padding: 45px 35px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.35s ease;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  min-height: 300px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ICON */
+.feature-icon {
+  font-size: 34px;
+
+  color: black;
+
+  margin-bottom: 28px;
+}
+
+/* TITLE */
+.feature-card h3 {
+  font-size: 24px;
+
+  font-weight: 600;
+
+  color: black;
+
+  margin-bottom: 18px;
+}
+
+/* TEXT */
+.feature-card p {
+  color: #666;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+
+  font-size: 15px;
+}
+
+/* LINK */
+.feature-card span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #2563eb;
+
+  transition: 0.3s ease;
+}
+
+.feature-card:hover span {
+  gap: 14px;
+}
+/* STATS CARD */
+.stats-card {
+  position: relative;
+
+  background: #111111;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  padding: 45px 25px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.stats-card:hover {
+  transform: translateY(-10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.stats-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent);
+
+  pointer-events: none;
+}
+
+/* ICON */
+.stats-icon {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #f5c16c;
+
+  font-size: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* NUMBER */
+.stats-card h3 {
+  font-size: 54px;
+
+  font-weight: 700;
+
+  color: white;
+
+  margin-bottom: 12px;
+}
+
+/* TEXT */
+.stats-card p {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 15px;
+
+  letter-spacing: 0.5px;
+}

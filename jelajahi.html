@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jelajahi Yogyakarta | Mediacloud competition made by Fadhel</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo -->
+    <link rel="icon" type="image/png" href="/assets/img/logo.png" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/jelajahi.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[9999]"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between"
+      >
+        <!-- LOGO -->
+        <div class="flex items-center gap-3">
+          <img
+            src="/assets/img/logo.png"
+            alt="Logo"
+            class="w-10 h-10 object-contain"
+          />
+
+          <!-- <h1 class="font-semibold text-lg hidden sm:block">
+            Explore Yogyakarta
+          </h1> -->
+        </div>
+
+        <!-- DESKTOP MENU -->
+        <ul
+          class="hidden lg:flex items-center gap-8 text-sm font-medium text-black"
+        >
+          <li><a href="/beranda.html" class="nav-link">Beranda</a></li>
+
+          <li><a href="/jelajahi.html" class="nav-link active">Jelajahi</a></li>
+
+          <li><a href="/budaya.html" class="nav-link">Budaya</a></li>
+
+          <li><a href="/kuliner.html" class="nav-link">Kuliner</a></li>
+
+          <li><a href="/wisata.html" class="nav-link">Wisata</a></li>
+
+          <li><a href="/smart-city.html" class="nav-link">Smart City</a></li>
+
+          <li><a href="/peta.html" class="nav-link">Peta</a></li>
+
+          <li><a href="/tentang.html" class="nav-link">Tentang</a></li>
+        </ul>
+
+        <!-- HAMBURGER -->
+        <button id="menu-btn" class="lg:hidden text-4xl text-black">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-white border-t border-black/10"
+      >
+        <ul class="flex flex-col p-6 gap-5 text-sm font-medium text-black">
+          <li><a href="/beranda.html">Beranda</a></li>
+
+          <li><a href="/jelajahi.html">Jelajahi</a></li>
+
+          <li><a href="/budaya.html">Budaya</a></li>
+
+          <li><a href="/kuliner.html">Kuliner</a></li>
+
+          <li><a href="/wisata.html">Wisata</a></li>
+
+          <li><a href="/smart-city.html">Smart City</a></li>
+
+          <li><a href="/peta.html">Peta</a></li>
+
+          <li><a href="/tentang.html">Tentang</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <!-- Background -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+            url(&quot;https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1600&quot;);
+        "
+      ></div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 text-center text-white px-6 max-w-4xl pt-32 md:pt-24"
+      >
+        <p
+          class="uppercase tracking-[4px] text-sm md:text-base text-gray-300 mb-5 fade-up"
+        >
+          Explore The City
+        </p>
+
+        <h1
+          class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6 fade-up"
+        >
+          Jelajahi Keindahan <br />
+          Yogyakarta
+        </h1>
+
+        <p
+          class="text-gray-200 leading-relaxed max-w-2xl mx-auto text-sm md:text-lg fade-up"
+        >
+          Temukan destinasi wisata, budaya, kuliner, sejarah, dan perkembangan
+          modern Yogyakarta dalam satu portal digital.
+        </p>
+
+        <!-- BUTTON -->
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 fade-up"
+        >
+          <a
+            href="#explore"
+            class="px-7 py-3 rounded-full bg-white text-black font-medium hover:scale-105 transition"
+          >
+            Explore Now
+          </a>
+
+          <a
+            href="/peta.html"
+            class="px-7 py-3 rounded-full border border-white text-white hover:bg-white hover:text-black transition"
+          >
+            Open Map
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEARCH SECTION ================= -->
+    <section id="explore" class="bg-black py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- SEARCH -->
+        <div class="search-box fade-up">
+          <i class="bx bx-search text-2xl text-gray-400"></i>
+
+          <input type="text" placeholder="Cari destinasi, budaya, kuliner..." />
+
+          <button>Explore</button>
+        </div>
+
+        <!-- FILTER -->
+        <div class="flex flex-wrap justify-center gap-4 mt-10 fade-up">
+          <button class="filter-btn active-filter">Semua</button>
+
+          <button class="filter-btn">Budaya</button>
+
+          <button class="filter-btn">Wisata</button>
+
+          <button class="filter-btn">Kuliner</button>
+
+          <button class="filter-btn">Smart City</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DESTINATION GRID ================= -->
+    <section class="bg-[#0a0a0a] py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CARD -->
+          <div class="destination-card fade-up">
+            <img src="/assets/img/malioboro.jpeg" class="destination-image" />
+
+            <div class="destination-overlay"></div>
+
+            <div class="destination-content">
+              <span class="destination-tag"> Wisata </span>
+
+              <h2>Malioboro</h2>
+
+              <p>
+                Kawasan ikonik pusat wisata dan budaya Yogyakarta yang selalu
+                hidup.
+              </p>
+
+              <button>Explore More</button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="destination-card fade-up">
+            <img src="/assets/img/prambanan.jpg" class="destination-image" />
+
+            <div class="destination-overlay"></div>
+
+            <div class="destination-content">
+              <span class="destination-tag"> Budaya </span>
+
+              <h2>Prambanan</h2>
+
+              <p>
+                Kompleks candi megah peninggalan sejarah nusantara yang
+                mendunia.
+              </p>
+
+              <button>Explore More</button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="destination-card fade-up">
+            <img src="/assets/img/gunungkidul.jpg" class="destination-image" />
+
+            <div class="destination-overlay"></div>
+
+            <div class="destination-content">
+              <span class="destination-tag"> Alam </span>
+
+              <h2>Gunung Kidul</h2>
+
+              <p>
+                Keindahan pantai dan alam Yogyakarta dengan panorama yang
+                menenangkan.
+              </p>
+
+              <button>Explore More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED SECTION ================= -->
+    <section class="bg-black py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- IMAGE -->
+          <div class="relative fade-up">
+            <img
+              src="/assets/img/Yogyakarta.jpg"
+              class="rounded-3xl w-full h-[550px] object-cover"
+            />
+
+            <div class="absolute inset-0 bg-black/30 rounded-3xl"></div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="fade-up">
+            <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-5">
+              Featured Destination
+            </p>
+
+            <h2 class="text-5xl font-bold text-white leading-tight mb-8">
+              Discover The Beauty of Yogyakarta
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed mb-10">
+              Yogyakarta merupakan kota budaya yang memiliki perpaduan unik
+              antara tradisi, sejarah, wisata, dan perkembangan modern.
+            </p>
+
+            <!-- STATS -->
+            <div class="grid grid-cols-2 gap-6">
+              <div class="mini-stat">
+                <h3>150+</h3>
+
+                <p>Tourism Spot</p>
+              </div>
+
+              <div class="mini-stat">
+                <h3>78+</h3>
+
+                <p>Cultural Heritage</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED DESTINATION ================= -->
+    <section class="bg-[#0a0a0a] py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADING -->
+        <div class="text-center mb-20 fade-up">
+          <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+            Featured Destination
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">
+            Discover Popular Places
+          </h2>
+
+          <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Jelajahi tempat paling populer di Yogyakarta dengan pengalaman
+            visual modern dan cinematic.
+          </p>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- BIG CARD -->
+          <div class="featured-card large-card fade-up">
+            <img src="/assets/img/prambanan.jpg" class="featured-image" />
+
+            <div class="featured-overlay"></div>
+
+            <div class="featured-content">
+              <span class="featured-tag"> Heritage </span>
+
+              <h2>Candi Prambanan</h2>
+
+              <p>
+                Candi Hindu terbesar di Indonesia dengan arsitektur megah dan
+                sejarah luar biasa.
+              </p>
+
+              <button>Explore More</button>
+            </div>
+          </div>
+
+          <!-- SMALL GRID -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <!-- CARD -->
+            <div class="featured-card fade-up">
+              <img src="/assets/img/malioboro.jpeg" class="featured-image" />
+
+              <div class="featured-overlay"></div>
+
+              <div class="featured-content small">
+                <span class="featured-tag"> Tourism </span>
+
+                <h2>Malioboro</h2>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="featured-card fade-up">
+              <img src="/assets/img/wayangkulit.jpg" class="featured-image" />
+
+              <div class="featured-overlay"></div>
+
+              <div class="featured-content small">
+                <span class="featured-tag"> Culture </span>
+
+                <h2>Wayang Kulit</h2>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="featured-card fade-up">
+              <img src="/assets/img/gunungkidul.jpg" class="featured-image" />
+
+              <div class="featured-overlay"></div>
+
+              <div class="featured-content small">
+                <span class="featured-tag"> Nature </span>
+
+                <h2>Gunung Kidul</h2>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="featured-card fade-up">
+              <img src="/assets/img/gudeg.jpg" class="featured-image" />
+
+              <div class="featured-overlay"></div>
+
+              <div class="featured-content small">
+                <span class="featured-tag"> Culinary </span>
+
+                <h2>Gudeg Jogja</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPLORE CATEGORY ================= -->
+    <section class="bg-black py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADING -->
+        <div class="text-center mb-20 fade-up">
+          <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+            Explore Category
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">
+            Explore By Category
+          </h2>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- ITEM -->
+          <div class="category-card fade-up">
+            <i class="bx bx-building-house"></i>
+
+            <h3>Wisata</h3>
+
+            <p>Tempat wisata modern dan bersejarah.</p>
+          </div>
+
+          <!-- ITEM -->
+          <div class="category-card fade-up">
+            <i class="bx bx-mask"></i>
+
+            <h3>Budaya</h3>
+
+            <p>Tradisi dan budaya khas Yogyakarta.</p>
+          </div>
+
+          <!-- ITEM -->
+          <div class="category-card fade-up">
+            <i class="bx bx-bowl-hot"></i>
+
+            <h3>Kuliner</h3>
+
+            <p>Makanan legendaris khas Jogja.</p>
+          </div>
+
+          <!-- ITEM -->
+          <div class="category-card fade-up">
+            <i class="bx bx-chip"></i>
+
+            <h3>Smart City</h3>
+
+            <p>Teknologi dan digitalisasi kota modern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MAP PREVIEW ================= -->
+    <section class="bg-[#0d0d0d] py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- LEFT -->
+          <div class="fade-up">
+            <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+              Interactive Map
+            </p>
+
+            <h2
+              class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6"
+            >
+              Explore Yogyakarta <br />
+              Through Digital Map
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed mb-10">
+              Temukan berbagai lokasi wisata, budaya, kuliner, dan pusat modern
+              Yogyakarta melalui peta digital interaktif.
+            </p>
+
+            <a
+              href="/peta.html"
+              class="inline-flex items-center gap-3 px-7 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition"
+            >
+              Open Map
+              <i class="bx bx-right-arrow-alt text-xl"></i>
+            </a>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="fade-up">
+            <div class="map-preview">
+              <img
+                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1400&auto=format&fit=crop"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black text-white">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <!-- LEFT -->
+          <div class="md:col-span-5">
+            <img src="/assets/img/logo.png" class="w-16 mb-5" />
+
+            <h2 class="text-2xl font-semibold mb-4">Explore Yogyakarta</h2>
+
+            <p class="text-gray-400 leading-relaxed max-w-md">
+              Portal digital wisata dan budaya Yogyakarta untuk turis lokal
+              maupun mancanegara.
+            </p>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="md:col-span-7">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+              <!-- MENU -->
+              <div>
+                <h3 class="font-semibold mb-5">Explore</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a href="/beranda.html" class="hover:text-white transition">
+                      Beranda
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/wisata.html" class="hover:text-white transition">
+                      Wisata
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/budaya.html" class="hover:text-white transition">
+                      Budaya
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- INFO -->
+              <div>
+                <h3 class="font-semibold mb-5">Information</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a
+                      href="/smart-city.html"
+                      class="hover:text-white transition"
+                    >
+                      Smart City
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/peta.html" class="hover:text-white transition">
+                      Peta
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="hover:text-white transition">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- SOCIAL -->
+              <div>
+                <h3 class="font-semibold mb-5">Social</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a
+                      href="www.instagram.com/@fadhelmr123"
+                      class="hover:text-white transition"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="facebook.com" class="hover:text-white transition">
+                      Facebook
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/fadhel-muhammad-ramadhan-568418376/"
+                      class="hover:text-white transition"
+                    >
+                      Linkedin
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-white/10 mt-14 pt-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-3"
+          >
+            <p class="text-sm text-gray-500">© 2026 Explore Yogyakarta</p>
+
+            <p class="text-sm text-gray-500">Designed by Fadhel</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/jelajahi.js"></script>
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kuliner Yogyakarta | Mediacloud competition made by Fadhel</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo -->
+    <link rel="icon" type="image/png" href="/assets/img/logo.png" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/kuliner.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[9999]"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between"
+      >
+        <!-- LOGO -->
+        <div class="flex items-center gap-3">
+          <img
+            src="/assets/img/logo.png"
+            alt="Logo"
+            class="w-10 h-10 object-contain"
+          />
+
+          <!-- <h1 class="font-semibold text-lg hidden sm:block">
+            Explore Yogyakarta
+          </h1> -->
+        </div>
+
+        <!-- DESKTOP MENU -->
+        <ul
+          class="hidden lg:flex items-center gap-8 text-sm font-medium text-black"
+        >
+          <li><a href="/beranda.html" class="nav-link">Beranda</a></li>
+
+          <li><a href="/jelajahi.html" class="nav-link">Jelajahi</a></li>
+
+          <li><a href="/budaya.html" class="nav-link">Budaya</a></li>
+
+          <li><a href="/kuliner.html" class="nav-link active">Kuliner</a></li>
+
+          <li><a href="/wisata.html" class="nav-link">Wisata</a></li>
+
+          <li><a href="/smart-city.html" class="nav-link">Smart City</a></li>
+
+          <li><a href="/peta.html" class="nav-link">Peta</a></li>
+
+          <li><a href="/tentang.html" class="nav-link">Tentang</a></li>
+        </ul>
+
+        <!-- HAMBURGER -->
+        <button id="menu-btn" class="lg:hidden text-4xl text-black">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-white border-t border-black/10"
+      >
+        <ul class="flex flex-col p-6 gap-5 text-sm font-medium text-black">
+          <li><a href="/beranda.html">Beranda</a></li>
+
+          <li><a href="/jelajahi.html">Jelajahi</a></li>
+
+          <li><a href="/budaya.html">Budaya</a></li>
+
+          <li><a href="/kuliner.html">Kuliner</a></li>
+
+          <li><a href="/wisata.html">Wisata</a></li>
+
+          <li><a href="/smart-city.html">Smart City</a></li>
+
+          <li><a href="/peta.html">Peta</a></li>
+
+          <li><a href="/tentang.html">Tentang</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ================= HERO KULINER ================= -->
+    <section
+      class="relative min-h-screen overflow-hidden flex items-center justify-center"
+    >
+      <!-- VIDEO -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/assets/img/" type="video/mp4" />
+      </video>
+
+      <!-- OVERLAY -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#2a1400]/70"
+      ></div>
+
+      <!-- BATIK -->
+      <div
+        class="absolute inset-0 opacity-[0.06] bg-cover bg-center"
+        style="
+          background-image: url(&quot;/assets/img/batikbackground.png&quot;);
+        "
+      ></div>
+
+      <!-- CONTENT -->
+      <div class="relative z-20 text-center text-white px-6 max-w-5xl pt-32">
+        <p
+          class="uppercase tracking-[5px] text-yellow-400 text-sm mb-5 fade-up"
+        >
+          Culinary Of Yogyakarta
+        </p>
+
+        <h1
+          class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-8 fade-up"
+        >
+          Taste The Authentic <br />
+          Flavor Of Yogyakarta
+        </h1>
+
+        <p
+          class="text-gray-300 max-w-3xl mx-auto leading-relaxed text-sm md:text-lg fade-up"
+        >
+          Jelajahi kelezatan kuliner khas Yogyakarta dari makanan tradisional
+          hingga street food legendaris.
+        </p>
+
+        <div class="mt-10 fade-up">
+          <a
+            href="#foods"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-yellow-400 text-black rounded-full font-medium hover:scale-105 transition"
+          >
+            Explore Culinary
+            <i class="bx bx-right-arrow-alt text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SIGNATURE FOODS ================= -->
+    <section id="foods" class="bg-[#0b0b0b] py-28 relative overflow-hidden">
+      <!-- BG -->
+      <div
+        class="absolute inset-0 opacity-[0.04] bg-cover bg-center"
+        style="
+          background-image: url(&quot;/assets/img/batikbackground.png&quot;);
+        "
+      ></div>
+
+      <div class="relative z-20 max-w-7xl mx-auto px-6">
+        <!-- HEADING -->
+        <div class="text-center mb-20 fade-up">
+          <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+            Signature Foods
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">
+            Traditional Culinary
+          </h2>
+
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Makanan khas Yogyakarta yang terkenal dengan cita rasa autentik dan
+            tradisional.
+          </p>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CARD -->
+          <div class="food-card fade-up">
+            <img src="/assets/img/gudeg.jpg" class="food-image" />
+
+            <div class="food-overlay"></div>
+
+            <div class="food-content">
+              <span>Traditional Food</span>
+
+              <h3>Gudeg Jogja</h3>
+
+              <p>Ikon kuliner Yogyakarta dengan rasa manis khas nangka muda.</p>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="food-card fade-up">
+            <img src="/assets/img/sateklatak.jpg" class="food-image" />
+
+            <div class="food-overlay"></div>
+
+            <div class="food-content">
+              <span>Street Food</span>
+
+              <h3>Sate Klathak</h3>
+
+              <p>Sate kambing khas Jogja dengan bumbu sederhana namun lezat.</p>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="food-card fade-up">
+            <img src="/assets/img/bakpia.jpg" class="food-image" />
+
+            <div class="food-overlay"></div>
+
+            <div class="food-content">
+              <span>Traditional Snack</span>
+
+              <h3>Bakpia</h3>
+
+              <p>
+                Oleh-oleh legendaris Yogyakarta dengan berbagai varian rasa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CULINARY PLACE ================= -->
+    <section class="bg-black py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- IMAGE -->
+          <div class="fade-up">
+            <div class="culinary-image-wrapper">
+              <img
+                src="/assets/img/nightkuliner.jpg"
+                class="culinary-main-image"
+              />
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="fade-up">
+            <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+              Culinary Destination
+            </p>
+
+            <h2
+              class="text-4xl md:text-5xl font-bold text-white leading-tight mb-8"
+            >
+              Experience The <br />
+              Night Culinary
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed mb-10">
+              Nikmati suasana kuliner malam khas Yogyakarta mulai dari
+              angkringan, kopi joss, hingga street food legendaris.
+            </p>
+
+            <!-- STATS -->
+            <div class="grid grid-cols-2 gap-6">
+              <div class="culinary-stat">
+                <h3>120+</h3>
+
+                <p>Culinary Spots</p>
+              </div>
+
+              <div class="culinary-stat">
+                <h3>24/7</h3>
+
+                <p>Street Food</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DRINK SECTION ================= -->
+    <section class="bg-[#0b0b0b] py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADING -->
+        <div class="text-center mb-20 fade-up">
+          <p class="uppercase tracking-[4px] text-yellow-400 text-sm mb-4">
+            Traditional Drink
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-5">
+            Warm Traditional Drinks
+          </h2>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- ITEM -->
+          <div class="drink-card fade-up">
+            <i class="bx bx-coffee"></i>
+
+            <h3>Kopi Joss</h3>
+
+            <p>Kopi unik dengan arang panas khas Yogyakarta.</p>
+          </div>
+
+          <!-- ITEM -->
+          <div class="drink-card fade-up">
+            <i class="bx bx-bowl-hot"></i>
+
+            <h3>Wedang Ronde</h3>
+
+            <p>Minuman jahe hangat dengan cita rasa tradisional.</p>
+          </div>
+
+          <!-- ITEM -->
+          <div class="drink-card fade-up">
+            <i class="bx bx-coffee"></i>
+
+            <h3>Wedang Uwuh</h3>
+
+            <p>Minuman rempah khas dengan aroma yang khas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black text-white">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <!-- LEFT -->
+          <div class="md:col-span-5">
+            <img src="/assets/img/logo.png" class="w-16 mb-5" />
+
+            <h2 class="text-2xl font-semibold mb-4">Explore Yogyakarta</h2>
+
+            <p class="text-gray-400 leading-relaxed max-w-md">
+              Portal digital wisata dan budaya Yogyakarta untuk turis lokal
+              maupun mancanegara.
+            </p>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="md:col-span-7">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+              <!-- MENU -->
+              <div>
+                <h3 class="font-semibold mb-5">Explore</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a href="/beranda.html" class="hover:text-white transition">
+                      Beranda
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/wisata.html" class="hover:text-white transition">
+                      Wisata
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/budaya.html" class="hover:text-white transition">
+                      Budaya
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- INFO -->
+              <div>
+                <h3 class="font-semibold mb-5">Information</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a
+                      href="/smart-city.html"
+                      class="hover:text-white transition"
+                    >
+                      Smart City
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/peta.html" class="hover:text-white transition">
+                      Peta
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="hover:text-white transition">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- SOCIAL -->
+              <div>
+                <h3 class="font-semibold mb-5">Social</h3>
+
+                <ul class="space-y-3 text-gray-400">
+                  <li>
+                    <a
+                      href="www.instagram.com/@fadhelmr123"
+                      class="hover:text-white transition"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="facebook.com" class="hover:text-white transition">
+                      Facebook
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/fadhel-muhammad-ramadhan-568418376/"
+                      class="hover:text-white transition"
+                    >
+                      Linkedin
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-white/10 mt-14 pt-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-3"
+          >
+            <p class="text-sm text-gray-500">© 2026 Explore Yogyakarta</p>
+
+            <p class="text-sm text-gray-500">Designed by Fadhel</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/kuliner.js"></script>
+  </body>
+</html>
